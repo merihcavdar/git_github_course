@@ -1,0 +1,34 @@
+the most scary thing -> "conflicts"
+when you attempt to merge two different branches, and they modify the same code.
+Git cannot figure out which one to use...
+
+it's a very common thing and nothing to worry about.
+most of the cases, it will be resolved with minimum effort.
+
+"git merge feature" -> merges to the master branch.
+error: Your local changes to the following files would be overwritten by merge:
+README.md
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 3493k3k4
+
+this is not a MERGE CONFLICT, rather FAILED MERGE
+
+on the master branch, first let's commit
+"git commit -am "my better feature"
+[master 45lmk458] my better feature
+1 file changed, 3 insertations (+), 1 deletion (-)
+
+now try to merge:
+"git merge feature"
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+in VS Code, any affected merge conflicted file would be highlighted in red with exclamation mark
+
+the difference between the two commits can be displayed by:
+"git diff"
+
+to get back to the original state without any merging:
+"git merge --abort"

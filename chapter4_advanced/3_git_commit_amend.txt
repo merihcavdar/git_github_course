@@ -1,0 +1,22 @@
+AMEND
+
+if you make a minor mistake in Git
+- maybe you forgot the stage the file before commiting
+without reverting or reset
+
+this only works in limited situations, it modifies the last commit
+
+for instance: 
+(this commit misses an unstaged file, forgotten to be added with "add")
+(the other issue is that I am not happy with the commit message, it has a typo, it doesn't carry the essence of the commit)
+
+-> git commit -am "bad message"
+[master 014b89] bad message
+1 file changed, 1 insertation (+)
+create mode 100644 README.md
+
+-> git commit --amend -m "better message"
+the previous message has been modified
+
+-> git add .
+-> git commit --amend --no-edit

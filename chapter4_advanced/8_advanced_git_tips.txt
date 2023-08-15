@@ -1,0 +1,83 @@
+the best advice -> "GET GOOD AT GIT"
+- new pull request
+- embarrasing check failures
+- merge conflicts
+
+
+1. no need to "git add .", the commad below does the job both
+git commit -am "that was easy" 
+
+2. use alias
+git config --global alias.ac "commit -am"
+from now on use the shortened command below
+git ac "noice"
+
+3. what if we made a typo in the commit message? --amend will update the commit
+git commit --amend -m "nice"
+
+what if you forgot some files to include in the stage?
+git add .
+git commit --amend --no-edit
+
+4. 
+git push origin master --force
+
+5. what if you push some code to a remote repository and then realize it's complete garbage and never should have been there in the first place, git revert command, take one commit and go back to the state that was there previously. it's kind of like "undo", but it doesn't remove the original commit from the history.
+git revert better
+
+6. Remote Work
+Find the repo on GitHub, hit the "." key
+it will open up browser-based VS Code
+
+7. Stash
+Have you ever spent time working on some changes that almost work but they can't really be committed yet because they break everything else or maybe it's just reallys loppy and you don't want all your friends to see it yet. 
+
+"git stash" -> will remove the changes from your current working directory and save them for later use without committing them to the repo. 
+
+"git stash pop" -> when you are ready to add those changes back
+when you use stash a lot, 
+
+"git stash save ..." followed by a name to reference it later. when you're ready to work on it again 
+
+"git stash list" to find it
+"git stash apply 0" -> corresponding index
+
+8. change the master branch name
+git branch -M main
+git status
+
+9. "git log" for history of commits
+it gets harder and harder to read when the projects gets more complicated by time.
+
+for that reason
+git log --graph --oneline --decorate
+
+10. "git bisect"
+allows you to start from a commit that is known to have a bug but you knew the app was working a few hours ago.
+
+"git bisect start" -> makes binary search
+"git bisect bad" -> continue searching
+"git bisect good 698mlkm9"
+
+11. Squash the commits
+you re working a feature branch that has 3 different commits and you re ready to merge it into the master branch 
+but all the commit messages are pointless and it would be better if it was just one single commit we can do that from our feature branch by running "git rebase master --interactive"
+
+12. maintain a repo one that that can be very usefl is get hooks
+hooks
+
+"git commit -m "lmueka yk"
+when an operation with git like a commit for example, it creates an event and hooks allow you to run some either before or after that event happens 
+in the hidden ".git" directiory
+there is another folder called "hooks"
+
+13. DESTRUCTION
+you want to get to the origin in the remote repo
+
+-> git fetch origin
+-> git reset --hard origin/master
+-> git clean -df
+
+14. when we switched to a new branch and forgot the previos branch name to go back
+use the command below
+"git checkout -"

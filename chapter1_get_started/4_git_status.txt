@@ -1,0 +1,12 @@
+check the status
+
+"git status" -> for inspecting the current state of the repo
+
+which files are added, deleted, modified and so on...
+
+sometimes you dont want to include a file in .git repo (maybe you have secret key value you dont want to share publicly, or build files which are unnecessary to share)
+
+create ".gitignore" -> point to other files or directiories
+secret.json
+node_modules/
+

@@ -1,0 +1,26 @@
+which allows developers to collaborate without getting each other's way.
+-> master branch is a trunk of the tree
+-> if all the developers work on the master branch, it would be chaotic
+-> branch, branches off the main trunk
+-> Bob, works on a new nav bar while
+-> Alex, works on a new database feature
+-> so that Alex can works on his own feature without messing with Bob's work.
+
+for individuals, branch can be used for experimenting new things... without polluting the master branch.
+
+"git branch" -> lists all the branches in the repo
+* master
+
+today modern world uses "main" for "master" so let's change
+"git branch -M main"
+
+to create a new branch:
+"git branch awesome"
+awesome
+* master
+-> we crated the "awesome" branch but we are still in the "master" branch, that means any code modification will affect the "master" branch
+
+to delete a branch:
+"git branch -d awesome"
+Deleted branch awesome
+

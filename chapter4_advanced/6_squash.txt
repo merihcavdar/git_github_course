@@ -1,0 +1,8 @@
+another thing with rebase, "SQUASH" commits
+when we make a lot of commits that are not necessary when feature finally merged onto the master.
+
+"git rebase master --interactive"
+hint: Waiting for your editor to close the file...
+
+"pick" means, to keep this commit
+"squash" the opposite

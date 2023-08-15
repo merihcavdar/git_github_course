@@ -1,0 +1,24 @@
+git rever t<commit-ID> -m "reverting last commit"
+
+you should never use "git reset" for commits that already been pushed to a remote repo on GitHub
+fortunately there is still a possibility
+
+"git add ."
+git commit -m "whoops"
+[master 1ded9b] whoops
+1 file changed, 1 insertation (+)
+create mode 100644 bad.md
+
+to adjust this mistake
+-> first list the commits
+"git log"
+
+-> get the id of the bad commit, copy that id
+"git revert 6ac8mlyk734bk843yk"
+
+similar to "git reset --hard 9mlk88"
+but the difference the file "bad.md" is not lost, it's still in the commit history
+
+Bottom line:
+-> git reset: useful for local, individual projects
+-> git revert: if you have a commit already pushed to a remote repo, revert is generally a better option.

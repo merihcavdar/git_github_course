@@ -1,0 +1,31 @@
+dealing with screw ups
+
+There are 3 different files area in Git
+-> Working dir
+All the files we are looking at the VS Code
+
+-> Staging area
+When we use the "git add ." command
+Can be viewed in VS Code with the Git icon in the SideBar
+
+-> Commits
+states of files in the history
+
+"git reset" -> will remove the files from the staging area
+
+-> let's commit a modification
+"git add ."
+"git commit -m "bad commit"
+
+-> we realised that this was a bad commit and we want to go back
+-> in order to do that, we should grab the id, ssh... of that commit which we can do in git log command
+"git log"
+
+-> then
+"git reset 897mk89789rmyl832l24/52485mk"
+
+-> hard way to do that, so the HEAD is adjusted, some files may have been deleted
+"git reset --hard 8341ylmk48mylek7143meku
+HEAD is now at 897
+
+DON'T RESET CODE ON GITHUB

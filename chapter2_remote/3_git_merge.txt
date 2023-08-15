@@ -1,0 +1,24 @@
+we have 
+- "master" branch on the remote repository and
+- "master" branch on the local repository
+
+the HEADS are at different commits
+
+remote HEAD is one commit AHEAD from the local repo
+
+2 different ways to merge them together
+the more difficult way is:
+-> fetch the changes from the remote repo
+-> merge the branches together
+
+to fetch the changes locally
+"git fetch"
+
+"git branch"
+* master
+
+"merge" commands takes 2 different branches or codabases
+
+"git merge origin/master"
+
+used strategies. one of them is "Fast-Forward"

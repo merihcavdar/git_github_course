@@ -1,0 +1,10 @@
+repository is a set of files that keep track of changes
+
+"git init"
+-> initialized empty Git repository
+bottom-left corner -> "master", aka "main" branch
+
+".git" folder is created which hidden by default
+Settings (in VS code) files.exclude
+
+if you remove ".git" folder, Git is gone...

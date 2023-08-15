@@ -1,0 +1,21 @@
+"push" command... which will take the code on our local repository and upload it or sync it out with the remote repo
+
+when you commit locally, it will not automatically sync up with the remote repo
+that's where "PUSH" comes in...
+
+push command requires 2 arguments:
+1-> the name of the remote repo
+2-> an the branch that you wanna push
+
+when added "-u" flag at the end of the command that sets the origin repo to upstream remote in the git config file
+
+"git push origin master"
+"git push origin master -u" -> when the remote repo is the final source of truth.
+
+on GitHub Repo page, the Commits are listed to be analysed
+diff between them
+
+use "pencil" icon to edit the file, and commit it on the web version. it comes in handy when you just want to adjust a typo.
+but when done so, the remote repository is "one commit ahead" from our local repo.
+
+how to sync up with remote repo?

@@ -1,0 +1,20 @@
+Pull Request
+it is a way to contribute to another developer's repository on GitHub
+
+-> first, find a repo on GitHub to contribute to send a pull request
+-> then, fork the repo
+-> it will be coppied to your own GitHub account. It will maintain a link to the UPSTREAM repo
+-> create a new branch
+"git branch ilikefreestuff"
+"git checkout ilikefreestuff"
+Switched to branch 'ilikefreestuff'
+
+-> now it is our job to make the software better.
+-> after modifications, commit to the repo
+"git add ."
+git commit -m "git'n a sticker"
+
+-> now let's submit the code to our remote repo (origin is the name of our main branch on remote)
+"git push origin ilikefreestuff"
+
+-> on our GitHub account, we see the "Create Pull Request" and send our branch to the owner of the original remote repo

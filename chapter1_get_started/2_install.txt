@@ -1,0 +1,21 @@
+git --version
+
+comes with a tool called "git bash"
+
+can be used with VS code that makes it feel like using Mac
+
+on Mac, Homebrew can be used to install Git
+"brew install git"
+
+for collaboration, introduce yourslef, "who are you":
+"git config --list"
+...
+...
+user.email=
+user.name=
+
+":q" to quit
+
+git config --global user.name "Merih Çavdar"
+git config --global user.email "cavdarmerih@hotmail.com"
+

@@ -1,0 +1,20 @@
+"git pull" is used to combine:
+-> fetch
+-> merge
+
+when developing software, you ll often pulling down new code from the remote repo
+
+simply:
+"git pull origin master"
+as "-u" flag is used before
+just:
+"git pull" is enough.
+
+- if you have uncommited changes in the current directory, 
+- and you try to pull down new codes from the remote repo
+-> the operation will fail... it will override the current changes...
+
+consider 
+- making commit for the current changes on the local
+- stashing
+- conflict

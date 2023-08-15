@@ -1,0 +1,7 @@
+- when you have a repo, and you want to play around on the web
+- you can hit "." (period) command, it will open cloud-based vscode
+- this is nice especially when you find a typo, you want to just pull command
+
+but you cannot have access to the "Terminal"
+
+Codespaces uses a "vm"

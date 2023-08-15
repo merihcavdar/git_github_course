@@ -1,0 +1,37 @@
+the most effective way to collaborate on software development is the most popularly "GitHub"
+other options: GitLab, BitBucket
+
+How to work with remote Repositories:
+the only thing you need is an GitHub account
+
+- Drapdown menu -> create a new repository
+- give it a name
+
+when created, GitHub will initialize an empty repo
+and give you insrtuctions on how to connect to it locally
+the only thing we need is the url like "https://github.com/merihcavdar/test-repo.git"
+
+back to VS Code Terminal, run the following command:
+"git remote" -> it will show you which remote repo you are connected. (for the time being, it returns nothing which means there is no connection to a remote repo)
+
+so to connect:
+"git remote add" followed by 2 values:
+1-> the name of the repository which is typically named "origin" because it will serve as the main source of truth for code
+2-> the URL to the remote repo (ends with .git) 
+"git remote add origin https://github.com/merihcavdar/test-repo.git
+
+run "git remote" again and it will list out "origin"
+origin
+
+if you provide "v" after the command, it will also show the URL
+"git remote -v"
+origin https://github.com/merihcavdar/test-repo.git (fetch)
+origin https://github.com/merihcavdar/test-repo.git (push)
+
+if you want more information:
+"git remote show origin" // it will provide additional information
+* remote origin
+Fetch URL: https://github.com/merihcavdar/test-repo.git
+Push  URL: https://github.com/merihcavdar/test-repo.git
+HEAD branch: (unknown)
+

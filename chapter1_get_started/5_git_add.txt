@@ -1,0 +1,17 @@
+STAGING
+the most confusing thing in Git
+
+collection is a snapshot of differences in file changes
+before commiting, add the files into the portrait
+
+"git add ." -> adding to the staging area
+. -> all the files in the current directory
+U changes into A
+Untracked to Added (to the staging area)
+
+"git reset ."
+go back
+
+to add just a single file
+"git add README.md"
+

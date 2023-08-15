@@ -1,0 +1,16 @@
+Git Tricks and UI Features
+
+Git icon on the "Sidebar"
+if you click on a file with "M" indication, it will show you "diff" so that the states in the file can be compared. For instance, app breaks. so the code can be compared with the previous state.
+
++ and - buttonss to "stage" / "unstage" the files
+click on check button to commit and then the message
+
+when clicked on "..." drop down menu, all the git commands are listed, you dont need to type them in the terminal.
+But it is recommended to be familiar with the CLI commands though.
+
+bottom-left corner, when clicked on the "Master branch" button, all the previously created branches listed and can be switched to one of them, or a new branch can be created...
+
+"Git Lens" plugin is recommended.
+it is most useful for large project with a lot of people because it adds additional annotations to the code like who is responsible for writing the code, cool way to visualize the repo
+

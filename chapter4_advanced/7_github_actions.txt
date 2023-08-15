@@ -1,0 +1,134 @@
+one of the best ways to increase productivity is to automate any manual repetetive workload.
+CI/CD -> Continous Integration / Continous Delivery
+
+Requirement: GitHub Repository
+5 different DevOps recipes
+Repo in GitHub
+all different events that can happen to that Repo
+- star
+- issue created
+- pull request
+- you might merge code to the master branch 
+
+These are events and any event can trigger an "automated workflow"
+
+1. Continous Integration
+the whole idea behind the CI, have developers submit their code to the main base in small maintable trunks. Usually on a daily basis, those changes must be automatically against the main codebase. 
+
+on GitHub, click on Actions tab -> this is where you can monitor your workflows. 
+.yml file where we define the workflow
+
+for instance
+
+name: Node Continous Integration
+
+on:
+  pull_request:
+    branches: [ master ]
+
+
+jobs:
+  test_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+2. Continous Deployment
+at this point, we have a valid pull request and when we merge to the master branch, we want to deploy the app to our custormers. 
+CI -> Merge Code In
+CD -> Release Code Out
+
+name: Firebase Continous Deployment
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+        node-version: 12
+      - run: npm ci
+      - run: npm run build
+      - uses: q09km/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+3. Publish NPM Packages
+
+name: Sveltefire Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+
+
+
+  publish-npm:
+    needs: build
+
+
+  publish-gpr
+    needs: build
+
+Communication tools: (Slack, Discours, Jira)
+
+4. Integrate Apps
+Slack Github
+
+whenever a github action triggered, in slack I am notified.
+a new github issue is posted...
+
+name: Slack Issues
+
+on:
+  issues:
+    types: [opened]
+
+
+jobs:
+  post_slack_message:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rtCamp/action-slack-notify@v2.0.0
+    env:
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      SLACK_USERNAME: CyberJeff
+      SLACK_CHANNEL: gh-issues
+
+
+5. Schedule Background Jobs
+How do I export Firestore data on a regular basis?
+
+name: Export Firestore data
+
+on:
+  schedule:
+    - cron: '00***'
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      
+      - run: gcloud config set project $PROJECT_ID
+      - run: gcloud firestore export $BUCKET

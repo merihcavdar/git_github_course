@@ -1,0 +1,21 @@
+commit -> every picturde in an album. every picture has its own unique id
+
+git commit -m "initial commit"
+"git status"
+-> on branch master
+-> nothing to commit, working tree clean
+
+if we want to grab some information about the last commit:
+"git log"
+-> gives the unique id
+-> author
+-> date/time
+
+HEAD is the most current commit on the branch
+
+when changes are made to file/files, there is this indication "M" on the File Explorer
+"M" -> "Modified"
+
+to avoid "git add ." command, you can combine "add" and "commit" in one command which is:
+git commit -a - m "fix: typo"
+

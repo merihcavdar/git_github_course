@@ -1,0 +1,35 @@
+-> "git status"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+-> to change branch to another one (for instance "feature" branch)
+"git checkout feature"
+Switched to branch 'feature'
+
+"git status"
+On branch feature
+nothing to commit, working tree clean
+
+-> some modifications done to "feature" branch
+git commit -am "added content"
+On branch feature
+nothing to commit, working tree clean
+
+-> when you checkout to "master" branch, the added content will disappear, because it doesn't live on the 'master' branch yet.
+"git checkout master"
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'
+
+-> let's go back to "feature" branch:
+"git checkout feature"
+Switched to branch 'feature'
+
+-> you are on the 'master' branch, you want to create and switched to that new branch at the same time:
+"git checkout -b cool"
+Switched to a new branch 'cool'
+
+-> branch names are mostly hard, long, hard to remember
+"git checkout -" -> it will take you back to the previous branch
+

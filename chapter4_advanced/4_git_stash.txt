@@ -1,0 +1,20 @@
+STASH allows you to save your work without commiting to the repository's history
+
+This is useful when you work with "experimental" thing that's not worthy commiting to the history of git.
+
+-> make some changes
+-> "git stash"  : you ll see the changes are gone (the original state)
+actually the changes are saved in the stash
+
+-> "git stash pop" : the changes came back. (the most recent item in the stash array)
+when used frequently, we may want to add some useful information
+-> "git stash save post1"
+Saved working directory and index state On master: post1
+
+-> "git stash list"
+stash@{0}: On master: post2
+stash@{1}: On master: post1
+stash@{2}: On master: mypost
+
+-> "git stash apply 1"
+which index to apply, add it as a parameter

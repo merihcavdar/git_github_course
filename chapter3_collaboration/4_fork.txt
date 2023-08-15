@@ -1,0 +1,11 @@
+it's not a "GIT" thing, more of "GITHUB" thing
+earlier, we saw "clone" example
+
+sometimes we want to have our own version on the GitHub
+when on the Fork button clicked, it will copy the repo to our own GitHub account
+without affecting the original repository
+at the same time it maintains a link to the original repo by that, you can fetch updates
+original is called "UPSTREAM"
+
+work on your own fork version, then send "PULL REQUEST"
+Author on the original repo can review the changes, and decides whether to merge the modifications or not.

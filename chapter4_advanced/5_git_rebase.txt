@@ -1,0 +1,22 @@
+if you work on a team, one thing people say commonly:
+"dude rebase instead of merge"
+
+Merge happens:
+-> one person creates a branch
+-> add some commits to it
+-> later merges it back to the master branch
+
+When you have larger team, multiple people working on multiple features it can lead to very complex commit history. That makes it harder to go back to the previous state 
+
+Rebase can be used as an alternative to merge which will take the feature branch and rewrite history to make it look like you just started working on the feauture branch with the latest updates on the master branch or some other branch you rebased.
+
+It keeps the feature branch up to date wtih the master branch. 
+
+"git rebase master"
+successfully rebased and updated refs/heads/features
+
+to make sure it will work out 
+-> create a temporary branch
+-> rebase from the original repo
+-> make tests in the temporary branch
+-> if everything is okay, back to your master branch and rebase.

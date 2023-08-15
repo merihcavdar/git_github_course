@@ -1,0 +1,20 @@
+keep track of changes
+"git init" to create a git repository or repo
+".git" directory
+commits to save the current state of the files
+
+every commit has a unique id -> which is connected to its parent
+
+by default, all the files are "Untracked"
+
+"git add ." add them into the repo
+
+git commit -m "...got it" -> with the message that what you did in these files
+
+multiple teams:
+git branch alternative-universe
+
+git checkout alternative-universe
+
+git merge alternative-universe
+

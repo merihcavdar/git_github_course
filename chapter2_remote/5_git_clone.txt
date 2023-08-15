@@ -1,0 +1,14 @@
+another common situation...
+copy or clone down to your local machine..
+
+- when you clone a repo, it will copy all the files from the remote and write them into your local machine,
+- it will also keep a reference to the remote repo... 
+that means you can use the commands from
+like "git pull" to grab the latest code from the source...
+
+usage:
+"git clone URL" and optional parameter cna be added like "different directory name"
+for instance:
+"git clone https://github.com/fireship-io/next-firebase-course.git demo"
+"git log"
+you should see the commits 
